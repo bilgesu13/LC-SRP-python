@@ -1,5 +1,6 @@
 # LC-SRP-python
-Low-Complexity Steered Response Power Mapping based on Nyquist-Shannon Sampling. Python version of the code by Thomas Dietzen. See https://github.com/tdietzen/LC-SRP for Matlab implementation.
+Low-Complexity Steered Response Power Mapping based on Nyquist-Shannon Sampling. 
+
 calc_FD_GCC.py computes frequency domain GCC.
 calc_SRP.py computes SRP approximation. 
 calc_SRPconv.py computes conventional SRP.
