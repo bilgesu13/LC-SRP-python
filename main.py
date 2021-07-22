@@ -118,7 +118,7 @@ for true_loc_idx in range (1,len(true_loc)+1):
     v_TD,sr = sf.read('v.wav');
     #scale noise component
     from set_SNR import set_SNR
-    v_TD = set_SNR(x_TD, v_TD, SNR); #dogru
+    v_TD = set_SNR(x_TD, v_TD, SNR);
 
     # transform to STFT domain
     from calc_STFT import calc_STFT
@@ -164,7 +164,7 @@ for true_loc_idx in range (1,len(true_loc)+1):
     print('* compute SRP approximation...')
     t = time.time();
     from calc_SRP import calc_SRP
-    SRP_appr = calc_SRP(psi_STFT, omega, T, N_mm, N_aux, Delta_t_i); #bu dogru gibi
+    SRP_appr = calc_SRP(psi_STFT, omega, T, N_mm, N_aux, Delta_t_i);
     elapsed = time.time() - t;
     print(elapsed)
     print('done')
@@ -194,9 +194,8 @@ for true_loc_idx in range (1,len(true_loc)+1):
 
 
     res['field1'][true_loc_idx-1,:,:] = approxErr_dB;
-    res['field2'][true_loc_idx-1,:,:] = locErr;     #res['field2'][:,0,0] refers to conv SRP
-                                                    # res['field2'][1,:,0] shows locErr for conv SRP for loc=2 ?
-                                                    # res['field2'][1,:,1] shows locErr for new SRP for loc=2 ?
+    res['field2'][true_loc_idx-1,:,:] = locErr;
+
 
 
 print('DONE.')
